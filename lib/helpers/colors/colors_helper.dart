@@ -1,7 +1,7 @@
 import 'package:flutter/painting.dart';
 
 class ColorHelper {
-  Color? hex(String color) {
+  static Color hex(String color) {
     // Variables
     String colorString = color.replaceAll('#', '');
     late int colorInt;
@@ -28,7 +28,7 @@ class ColorHelper {
     throw Exception('Invalid hex color format');
   }
 
-  bool isValidHexColorFormat(String color) {
+  static bool isValidHexColorFormat(String color) {
     return color.startsWith("#") &&
         ((color.substring(1, color.length).length == 6) ||
             (color.substring(1, color.length).length == 3) ||
