@@ -1,16 +1,37 @@
-# instagram_redesign
+# UI Instagram redesign
 
-A new Flutter project.
+Hey, I put here the progress of a dribbble ui design shot for the instagram app
 
-## Getting Started
+The <a href="https://dribbble.com/shots/14194596-Instagram-Redesign-UI">original xd file design</a> set open to use from <a href="https://dribbble.com/m4st3rmiau">Mao Lop
+</a>
 
-This project is a starting point for a Flutter application.
 
-A few resources to get you started if this is your first Flutter project:
+# Screenshots
+<img src="https://cdn.dribbble.com/users/5722038/screenshots/14194596/media/f64f53b46782060154e896816334297b.png" alt="app screenshots" />
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+# How far i got ?
+Now, I set all home screen widgets, with all widgets<br>
+Status : [NOT COMPLETED]
+
+# Usage
+Click the "Fork" button, or clone this repository with
+```
+git clone dedd
+```
+
+After that, run this in the command line
+```
+flutter pub get
+````
+
+That's it !
+
+<br><br>
+# Contributers
+<img src="https://avatars.githubusercontent.com/u/25140579?s=40&v=4" alt="anasfik" width="70" style="border-radius: 50%;" />
+
+# Contibuting
+Hi again, I would really appreciate helping on this, I will be satisfied to accept any types of contributions including refactoring, fixing bugs, adding new features, coding new widgets, correcting wrong spells...
+
+
