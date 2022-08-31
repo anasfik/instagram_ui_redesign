@@ -20,7 +20,7 @@ class ImagesPageView extends StatelessWidget {
       child: AspectRatio(
         aspectRatio: 1,
         child: ClipRRect(
-          borderRadius: BorderRadius.circular(20),
+          borderRadius: BorderRadius.circular(13),
           child: ScrollConfiguration(
             behavior: const ScrollBehavior().copyWith(
               overscroll: false,

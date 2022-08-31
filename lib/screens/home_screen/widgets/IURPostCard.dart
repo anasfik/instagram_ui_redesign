@@ -11,6 +11,7 @@ import 'HeartButtonWithLikes.dart';
 import 'ImagesNumerations.dart';
 import 'ImagesPageView.dart';
 import 'IndicatorDots.dart';
+import 'PostGeneralInformation.dart';
 
 class IURPostCard extends StatelessWidget {
   IURPostCard({
@@ -24,71 +25,18 @@ class IURPostCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
+      decoration: BoxDecoration(
+        color: AppColors.white,
+        borderRadius: BorderRadius.circular(20),
+      ),
       width: double.infinity,
-      margin: const EdgeInsets.symmetric(horizontal: 15),
+      margin: const EdgeInsets.only(left: 15, right: 15, bottom: 20),
+      padding: const EdgeInsets.symmetric(horizontal: 5, vertical: 15),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Semantics(
-            label: "general information about post, authorName, authorImg",
-            child: Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 15),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                crossAxisAlignment: CrossAxisAlignment.center,
-                children: [
-                  Row(
-                    children: [
-                      Semantics(
-                        label: "author image",
-                        child: CircleAvatar(
-                          radius: 20,
-                          backgroundImage: AssetImage(post.authorImgPath),
-                        ),
-                      ),
-                      const SizedBox(width: 10),
-                      Column(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          Semantics(
-                            label: "author name",
-                            child: AutoSizeText(
-                              post.authorName,
-                              style: Theme.of(context).textTheme.headline3,
-                            ),
-                          ),
-                          Semantics(
-                            label: "time of publish differance from now",
-                            child: AutoSizeText(
-                              "${DateTime.now().difference(post.timeOfPublish).inMinutes} min ago",
-                              style: Theme.of(context).textTheme.subtitle1,
-                            ),
-                          ),
-                        ],
-                      ),
-                    ],
-                  ),
-                  Row(
-                    children: [
-                      SvgIconsHelper.fromSvg(
-                        svgPath: "assets/icons/send.svg",
-                        semanticLabel: "send icon",
-                        size: 20,
-                        color: Theme.of(context).primaryColor.withOpacity(.6),
-                      ),
-                      const SizedBox(width: 10),
-                      SvgIconsHelper.fromSvg(
-                        svgPath: "assets/icons/items.svg",
-                        semanticLabel: "items icon",
-                        size: 15,
-                        color: Theme.of(context).primaryColor.withOpacity(.6),
-                      ),
-                    ],
-                  ),
-                ],
-              ),
-            ),
+          PostGeneralInformation(
+            post: post,
           ),
           SizedBox(
             width: double.infinity,
@@ -119,6 +67,9 @@ class IURPostCard extends StatelessWidget {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
+                const SizedBox(
+                  height: 7.5,
+                ),
                 AutoSizeText.rich(
                   TextSpan(
                     style: Theme.of(context).textTheme.headline4!.copyWith(
@@ -136,6 +87,9 @@ class IURPostCard extends StatelessWidget {
                       const TextSpan(text: " people"),
                     ],
                   ),
+                ),
+                const SizedBox(
+                  height: 10,
                 ),
                 AutoSizeText.rich(
                   TextSpan(
@@ -160,16 +114,17 @@ class IURPostCard extends StatelessWidget {
                     ],
                   ),
                 ),
-
-                //
+                const SizedBox(
+                  height: 10 * 2 - (5 / 2),
+                ),
                 AutoSizeText.rich(
                   TextSpan(
                     style: Theme.of(context).textTheme.headline4!.copyWith(
-                          fontWeight: FontWeight.w400,
-                          color: AppColors.black.withOpacity(.35),
+                          fontWeight: FontWeight.bold,
+                          color: AppColors.black.withOpacity(.2),
                         ),
                     children: [
-                      const TextSpan(text: "See all"),
+                      const TextSpan(text: "See all "),
                       TextSpan(
                         text: "${post.comments}",
                       ),
