@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:instagram_redesign/screens/home_screen/widgets/IURPostCard.dart';
 
 import '../../models/IURPost_model.dart';
 import 'widgets/ExploreTitle.dart';
 import 'widgets/IURAppBar.dart';
 import 'widgets/IURStoriesScrollView.dart';
+import 'widgets/QtatusBarSizedBox.dart';
 
 class Homepage extends StatelessWidget {
   const Homepage({super.key});
@@ -15,7 +17,9 @@ class Homepage extends StatelessWidget {
         body: Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        const SizedBox(height: 50),
+        StatusBarSizedBox(
+          additionalHeight: 10,
+        ),
         const IURAppBar(),
         const IURStoriesScrollView(),
         const ExploreTitle(),
@@ -33,7 +37,6 @@ IURPostModel firstPost = IURPostModel(
     "assets/postImgs/space.png",
     "assets/postImgs/space.png",
     "assets/postImgs/space.png",
-   
   ],
   title: "SACRIFICE | VIRUS",
   description: "this photomanipulation inspired in the virus ",
