@@ -8,7 +8,7 @@ class HomeScreenController extends GetxController {
   void onInit() {
     pageController.addListener(() {
       scrollPosition.value = pageController.page;
-      print(scrollPosition.value);
+
     });
 
     super.onInit();

@@ -6,6 +6,11 @@ import 'package:instagram_redesign/helpers/icons.dart';
 
 import '../../../controllers/home_screen_controller.dart';
 import '../../../models/IURPost_model.dart';
+import 'CommentButton.dart';
+import 'HeartButtonWithLikes.dart';
+import 'ImagesNumerations.dart';
+import 'ImagesPageView.dart';
+import 'IndicatorDots.dart';
 
 class IURPostCard extends StatelessWidget {
   IURPostCard({
@@ -85,151 +90,27 @@ class IURPostCard extends StatelessWidget {
               ),
             ),
           ),
-          Container(
+          SizedBox(
             width: double.infinity,
             child: Stack(
               alignment: Alignment.center,
               children: [
-                Container(
-                  margin: const EdgeInsets.symmetric(horizontal: 3),
-                  child: AspectRatio(
-                    aspectRatio: 1,
-                    child: ClipRRect(
-                      borderRadius: BorderRadius.circular(20),
-                      child: ScrollConfiguration(
-                        behavior: const ScrollBehavior().copyWith(
-                          overscroll: false,
-                        ),
-                        child: PageView.builder(
-                          controller: homeScreenController.pageController,
-                          clipBehavior: Clip.hardEdge,
-                          itemCount: post.imgPaths.length,
-                          itemBuilder: (context, index) => Container(
-                            width: double.infinity,
-                            child: Image.asset(
-                              post.imgPaths[index],
-                              fit: BoxFit.cover,
-                            ),
-                          ),
-                        ),
-                      ),
-                    ),
-                  ),
+                ImagesPageView(
+                  homeScreenController: homeScreenController,
+                  post: post,
                 ),
-                Positioned(
-                  bottom: 20,
-                  child: Obx(
-                    () => Container(
-                      width: 35,
-                      child: Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: [
-                          ...List.generate(
-                            post.imgPaths.length,
-                            (index) => Container(
-                              decoration: BoxDecoration(
-                                color: Theme.of(context)
-                                    .scaffoldBackgroundColor
-                                    .withOpacity(index ==
-                                            homeScreenController
-                                                .scrollPosition.value!
-                                                .round()
-                                        ? 1
-                                        : 0.3),
-                                borderRadius: BorderRadius.circular(20),
-                              ),
-                              width: 6,
-                              height: 6,
-                            ),
-                          )
-                        ],
-                      ),
-                    ),
-                  ),
+                IndicatorDots(
+                  post: post,
+                  homeScreenController: homeScreenController,
                 ),
-                Positioned(
-                  top: 25,
-                  right: 20,
-                  child: Obx(
-                    () => Container(
-                      padding: const EdgeInsets.symmetric(
-                        horizontal: 10,
-                        vertical: 4,
-                      ),
-                      decoration: BoxDecoration(
-                        color: AppColors.black.withOpacity(.25),
-                        borderRadius: BorderRadius.circular(20),
-                      ),
-                      child: AutoSizeText(
-                        "${homeScreenController.scrollPosition.value!.round() + 1} / ${post.imgPaths.length}",
-                        style: Theme.of(context).textTheme.headline4!.copyWith(
-                              color: AppColors.white,
-                              fontWeight: FontWeight.w500,
-                              fontSize: 12,
-                            ),
-                      ),
-                    ),
-                  ),
+                ImagesNumerations(
+                  homeScreenController: homeScreenController,
+                  post: post,
                 ),
-                Positioned(
-                  bottom: 25,
-                  left: 20,
-                  child: Row(
-                    children: [
-                      Container(
-                        width: 30,
-                        height: 30,
-                        decoration: BoxDecoration(
-                          color:
-                              post.isLiked ? AppColors.pink : AppColors.white,
-                          borderRadius: BorderRadius.circular(100),
-                        ),
-                        child: SvgIconsHelper.fromSvg(
-                            svgPath: "assets/icons/heart.svg",
-                            semanticLabel: "heart icon",
-                            color: post.isLiked
-                                ? AppColors.white
-                                : AppColors.pink),
-                      ),
-                      const SizedBox(width: 5),
-                      Container(
-                        padding: const EdgeInsets.symmetric(
-                          horizontal: 10,
-                          vertical: 4,
-                        ),
-                        decoration: BoxDecoration(
-                          color: AppColors.white.withOpacity(.7),
-                          borderRadius: BorderRadius.circular(30),
-                        ),
-                        child: AutoSizeText(
-                          "${post.likes}",
-                          style:
-                              Theme.of(context).textTheme.headline4!.copyWith(
-                                    fontWeight: FontWeight.w500,
-                                    fontSize: 12,
-                                  ),
-                        ),
-                      ),
-                    ],
-                  ),
+                HeartButtonWithLikes(
+                  post: post,
                 ),
-                Positioned(
-                  bottom: 25,
-                  right: 20,
-                  child: Container(
-                    width: 30,
-                    height: 30,
-                    decoration: BoxDecoration(
-                      color: AppColors.white,
-                      borderRadius: BorderRadius.circular(100),
-                    ),
-                    child: SvgIconsHelper.fromSvg(
-                      svgPath: "assets/icons/comment.svg",
-                      semanticLabel: "comment icon",
-                      color: AppColors.black,
-                    ),
-                  ),
-                )
+                const CommentButton(),
               ],
             ),
           ),
