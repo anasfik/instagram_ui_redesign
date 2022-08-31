@@ -1,5 +1,8 @@
+import 'package:auto_size_text/auto_size_text.dart';
+import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 
+import '../../../helpers/colors/colors.dart';
 import '../../../helpers/icons.dart';
 
 class IURAppBar extends StatelessWidget {
@@ -7,19 +10,54 @@ class IURAppBar extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Row(
-      children: [
-        ...List.generate(
-          appBarItems.length,
-          (i) => Semantics(
-            label: appBarItems[i]["semanticLabel"],
-            child: SvgIconsHelper.fromSvg(
-              svgPath: appBarItems[i]["svgPath"]!,
-              semanticLabel: appBarItems[i]["semanticLabel"]!,
+    return Container(
+      margin: const EdgeInsets.symmetric(horizontal: 10),
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        crossAxisAlignment: CrossAxisAlignment.center,
+        children: [
+          ...List.generate(
+            appBarItems.length,
+            (i) => Stack(
+              clipBehavior: Clip.none,
+              children: [
+                Semantics(
+                  label: appBarItems[i]["semanticLabel"],
+                  child: SvgIconsHelper.fromSvg(
+                    svgPath: appBarItems[i]["svgPath"]!,
+                    semanticLabel: appBarItems[i]["semanticLabel"]!,
+                  ),
+                ),
+                if (appBarItems[i]["svgPath"] ==
+                    "assets/icons/message.svg") ...[
+                  Positioned(
+                    top: -5,
+                    right: -5,
+                    child: Semantics(
+                      label: "Messages count badge",
+                      child: Container(
+                        width: 15,
+                        height: 15,
+                        decoration: BoxDecoration(
+                          color: AppColors.pink,
+                          borderRadius: BorderRadius.circular(50),
+                        ),
+                        child: Center(
+                          child: AutoSizeText(
+                            "2",
+                            maxLines: 1,
+                            style: Theme.of(context).textTheme.headline6,
+                          ),
+                        ),
+                      ),
+                    ),
+                  ),
+                ]
+              ],
             ),
-          ),
-        )
-      ],
+          )
+        ],
+      ),
     );
   }
 }

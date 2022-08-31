@@ -8,9 +8,15 @@ class Homepage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Column(children: [
-        IURAppBar(),
-      ],)
-    );
+        body: Container(
+      margin: const EdgeInsets.symmetric(horizontal: 20),
+      child: Column(
+        children: const [
+          SizedBox(height: 50),
+          IURAppBar(),
+          
+        ],
+      ),
+    ));
   }
 }
