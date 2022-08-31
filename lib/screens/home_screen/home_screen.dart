@@ -30,9 +30,10 @@ IURPostModel firstPost = IURPostModel(
   authorName: 'Maoo.lopez',
   authorImgPath: 'assets/images/add_story_item_profile.png',
   imgPaths: <String>[
-    "assets/images/postImgs/space.png",
-    "assets/images/postImgs/space.png",
-    "assets/images/postImgs/space.png",
+    "assets/postImgs/space.png",
+    "assets/postImgs/space.png",
+    "assets/postImgs/space.png",
+   
   ],
   title: "SACRIFICE | VIRUS",
   description: "this photomanipulation inspired in the virus ",
