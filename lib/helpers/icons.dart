@@ -15,6 +15,7 @@ class SvgIconsHelper {
       semanticsLabel: semanticLabel,
       height: size,
       width: size,
+      fit: BoxFit.none,
     );
   }
 }
