@@ -5,4 +5,13 @@ class AppColors {
   static Color lightBackgroundColor = ColorHelper.hex('#F5F6FA');
   static Color black = ColorHelper.hex('#000');
   static Color pink = ColorHelper.hex('#DD2A7B');
+
+  static LinearGradient instagramGradientColor = LinearGradient(
+    colors: [
+      ColorHelper.hex('#fc0b7b'),
+      ColorHelper.hex('#7820ad'),
+    ],
+    begin: Alignment.topCenter,
+    end: Alignment.bottomCenter,
+  );
 }

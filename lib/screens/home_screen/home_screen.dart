@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import 'widgets/IURAppBar.dart';
+import 'widgets/IURStoriesScrollView.dart';
 
 class Homepage extends StatelessWidget {
   const Homepage({super.key});
@@ -8,15 +9,12 @@ class Homepage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        body: Container(
-      margin: const EdgeInsets.symmetric(horizontal: 20),
-      child: Column(
-        children: const [
-          SizedBox(height: 50),
-          IURAppBar(),
-          
-        ],
-      ),
+        body: Column(
+      children: const [
+        SizedBox(height: 50),
+        IURAppBar(),
+        IURStoriesScrollView(),
+      ],
     ));
   }
 }

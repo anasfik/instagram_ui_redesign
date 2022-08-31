@@ -11,6 +11,11 @@ class AppThemes {
         fontWeight: FontWeight.bold,
         fontSize: 11,
       ),
+      headline4: TextStyle(
+        color: AppColors.black,
+        fontWeight: FontWeight.w300,
+        fontSize: 13,
+      ),
     ),
   );
 }
