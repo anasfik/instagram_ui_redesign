@@ -2,17 +2,25 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 class HomeScreenController extends GetxController {
-  Rx<double?> scrollPosition = 0.0.obs;
+  Rx<double?> scrollPosition1 = 0.0.obs;
+  Rx<double?> scrollPosition2 = 0.0.obs;
 
   @override
   void onInit() {
-    pageController.addListener(() {
-      scrollPosition.value = pageController.page;
+    pageControllerExample1 = PageController();
+    pageControllerExample2 = PageController();
 
+    pageControllerExample1.addListener(() {
+      scrollPosition1.value = pageControllerExample1.page;
+    });
+
+    pageControllerExample2.addListener(() {
+      scrollPosition2.value = pageControllerExample2.page;
     });
 
     super.onInit();
   }
 
-  final PageController pageController = PageController();
+  late PageController pageControllerExample1;
+  late PageController pageControllerExample2;
 }

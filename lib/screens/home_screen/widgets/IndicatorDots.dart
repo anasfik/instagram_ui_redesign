@@ -31,8 +31,15 @@ class IndicatorDots extends StatelessWidget {
                     color: Theme.of(context)
                         .scaffoldBackgroundColor
                         .withOpacity(index ==
-                                homeScreenController.scrollPosition.value!
-                                    .round()
+                                (post.iURPostModelPageController ==
+                                        homeScreenController
+                                            .pageControllerExample1
+                                    ? homeScreenController
+                                        .scrollPosition1.value!
+                                        .round()
+                                    : homeScreenController
+                                        .scrollPosition2.value!
+                                        .round())
                             ? 1
                             : 0.3),
                     borderRadius: BorderRadius.circular(20),

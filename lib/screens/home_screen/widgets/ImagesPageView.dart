@@ -20,13 +20,13 @@ class ImagesPageView extends StatelessWidget {
       child: AspectRatio(
         aspectRatio: 1,
         child: ClipRRect(
-          borderRadius: BorderRadius.circular(13),
+          borderRadius: BorderRadius.circular(20),
           child: ScrollConfiguration(
             behavior: const ScrollBehavior().copyWith(
               overscroll: false,
             ),
             child: PageView.builder(
-              controller: homeScreenController.pageController,
+              controller: post.iURPostModelPageController,
               clipBehavior: Clip.hardEdge,
               itemCount: post.imgPaths.length,
               itemBuilder: (context, index) => Container(

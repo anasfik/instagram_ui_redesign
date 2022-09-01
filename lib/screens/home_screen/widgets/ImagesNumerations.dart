@@ -32,7 +32,7 @@ class ImagesNumerations extends StatelessWidget {
             borderRadius: BorderRadius.circular(20),
           ),
           child: AutoSizeText(
-            "${homeScreenController.scrollPosition.value!.round() + 1} / ${post.imgPaths.length}",
+            "${(post.iURPostModelPageController == homeScreenController.pageControllerExample1 ? homeScreenController.scrollPosition1.value!.round() : homeScreenController.scrollPosition2.value!.round()) + 1} / ${post.imgPaths.length}",
             style: Theme.of(context).textTheme.headline4!.copyWith(
                   color: AppColors.white,
                   fontWeight: FontWeight.w500,

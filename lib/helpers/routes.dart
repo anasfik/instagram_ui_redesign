@@ -6,7 +6,7 @@ class AppRoutes {
   static List<GetPage> routes = <GetPage>[
     GetPage(
       name: "/",
-      page: () => const Homepage(),
+      page: () => Homepage(),
     ),
   ];
 }

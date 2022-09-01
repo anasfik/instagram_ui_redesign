@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:instagram_redesign/controllers/home_screen_controller.dart';
 import 'package:instagram_redesign/screens/home_screen/widgets/IURPostCard.dart';
 
 import '../../helpers/colors/colors.dart';
@@ -11,7 +13,7 @@ import 'widgets/IURStoriesScrollView.dart';
 import 'widgets/QtatusBarSizedBox.dart';
 
 class Homepage extends StatelessWidget {
-  const Homepage({super.key});
+  Homepage({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -108,6 +110,7 @@ class Homepage extends StatelessWidget {
             ...List.generate(
               postsSamples.length,
               (index) => IURPostCard(
+                key: Key("postCard$index"),
                 post: postsSamples[index],
               ),
             )
@@ -118,8 +121,11 @@ class Homepage extends StatelessWidget {
   }
 }
 
+final homeScreenController = Get.put(HomeScreenController());
+
 List<IURPostModel> postsSamples = [
   IURPostModel(
+    iURPostModelPageController: homeScreenController.pageControllerExample1,
     postId: 1,
     authorName: 'Maoo.lopez',
     authorImgPath: 'assets/images/add_story_item_profile.png',
@@ -141,6 +147,7 @@ List<IURPostModel> postsSamples = [
     ),
   ),
   IURPostModel(
+    iURPostModelPageController: homeScreenController.pageControllerExample2,
     postId: 1,
     authorName: 'Maoo.lopez',
     authorImgPath: 'assets/images/add_story_item_profile.png',

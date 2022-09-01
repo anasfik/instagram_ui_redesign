@@ -2,8 +2,6 @@ import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:instagram_redesign/helpers/colors/colors.dart';
-import 'package:instagram_redesign/helpers/icons.dart';
-
 import '../../../controllers/home_screen_controller.dart';
 import '../../../models/IURPost_model.dart';
 import 'CommentButton.dart';
@@ -19,9 +17,12 @@ class IURPostCard extends StatelessWidget {
     required this.post,
   }) : super(key: key);
 
+
   final HomeScreenController homeScreenController =
       Get.put(HomeScreenController());
   final IURPostModel post;
+
+
   @override
   Widget build(BuildContext context) {
     return Container(

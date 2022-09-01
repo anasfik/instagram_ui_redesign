@@ -13,8 +13,10 @@ class IURPostModel {
     required this.comments,
     required this.isLiked,
     required this.showCaseCommentAuthor,
+    required this.iURPostModelPageController,
   });
 
+  final iURPostModelPageController;
   String title,
       authorName,
       authorImgPath,
