@@ -1,91 +1,31 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:instagram_redesign/controllers/home_screen_controller.dart';
+import 'package:instagram_redesign/screens/home_screen/widgets/IURBottomBar.dart';
 import 'package:instagram_redesign/screens/home_screen/widgets/IURPostCard.dart';
 
-import '../../helpers/colors/colors.dart';
-import '../../helpers/colors/colors_helper.dart';
-import '../../helpers/icons.dart';
+
 import '../../models/IURPost_model.dart';
 import 'widgets/ExploreTitle.dart';
 import 'widgets/IURAppBar.dart';
+import 'widgets/IURFAB.dart';
 import 'widgets/IURStoriesScrollView.dart';
 import 'widgets/QtatusBarSizedBox.dart';
 
 class Homepage extends StatelessWidget {
-  Homepage({super.key});
+  const Homepage({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       extendBody: true,
-      bottomNavigationBar: BottomAppBar(
+      bottomNavigationBar: const BottomAppBar(
         child: Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 5),
-          child: BottomNavigationBar(
-            key: const Key('bottomNavigationBar'),
-            type: BottomNavigationBarType.fixed,
-            showSelectedLabels: false,
-            showUnselectedLabels: false,
-            items: <BottomNavigationBarItem>[
-              BottomNavigationBarItem(
-                label: "Home",
-                icon: SvgIconsHelper.fromSvg(
-                  svgPath: "assets/icons/home.svg",
-                  semanticLabel: "home icon",
-                  color: AppColors.pink,
-                ),
-              ),
-              BottomNavigationBarItem(
-                label: "Home",
-                icon: SvgIconsHelper.fromSvg(
-                  svgPath: "assets/icons/search.svg",
-                  semanticLabel: "search icon",
-                ),
-              ),
-              BottomNavigationBarItem(
-                label: "just for taking extra space",
-                icon: SvgIconsHelper.fromSvg(
-                  svgPath: "assets/icons/bar_heart.svg",
-                  color: Colors.transparent,
-                  semanticLabel: "just for taking extra space",
-                ),
-              ),
-              BottomNavigationBarItem(
-                label: "heart",
-                icon: SvgIconsHelper.fromSvg(
-                  svgPath: "assets/icons/bar_heart.svg",
-                  semanticLabel: "heart icon",
-                ),
-              ),
-              const BottomNavigationBarItem(
-                label: "profile image",
-                icon: CircleAvatar(
-                  radius: 14,
-                  backgroundImage:
-                      AssetImage("assets/images/add_story_item_profile.png"),
-                ),
-              ),
-            ],
-          ),
+          padding: EdgeInsets.symmetric(horizontal: 5),
+          child: IURBottomBar(),
         ),
       ),
-      floatingActionButton: Container(
-        height: 70,
-        width: 70,
-        decoration: BoxDecoration(
-          gradient: AppColors.floatingActionButtonColor,
-          borderRadius: BorderRadius.circular(100),
-        ),
-        child: IconButton(
-          onPressed: () {},
-          icon: SvgIconsHelper.fromSvg(
-            svgPath: "assets/icons/instagram.svg",
-            semanticLabel: "instagram icon",
-            color: AppColors.white,
-          ),
-        ),
-      ),
+      floatingActionButton: const IURFAB(),
       floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
       body: SingleChildScrollView(
         scrollDirection: Axis.vertical,
@@ -120,6 +60,9 @@ class Homepage extends StatelessWidget {
     );
   }
 }
+
+
+
 
 final homeScreenController = Get.put(HomeScreenController());
 
