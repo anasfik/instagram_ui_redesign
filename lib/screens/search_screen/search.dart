@@ -4,6 +4,7 @@ import 'package:instagram_redesign/screens/search_screen/widgets/IURSearchField.
 import '../home_screen/widgets/QtatusBarSizedBox.dart';
 import 'widgets/IURAppBar.dart';
 import 'widgets/IURCategoriesScrollView.dart';
+import 'widgets/StaggeredPosts.dart';
 
 class SearchScreen extends StatelessWidget {
   const SearchScreen({super.key});
@@ -13,8 +14,8 @@ class SearchScreen extends StatelessWidget {
     return SingleChildScrollView(
       scrollDirection: Axis.vertical,
       child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: const <Widget>[
+        crossAxisAlignment: CrossAxisAlignment.center,
+        children: <Widget>[
           StatusBarSizedBox(
             additionalHeight: 10,
           ),
@@ -27,6 +28,10 @@ class SearchScreen extends StatelessWidget {
             height: 25,
           ),
           IURSearchField(),
+          SizedBox(
+            height: 25,
+          ),
+          StaggeredPosts(),
         ],
       ),
     );
