@@ -42,13 +42,19 @@ class IURStorieItem extends StatelessWidget {
                         : AppColors.instagramGradientColor,
                   ),
                   child: Center(
-                    child: Container(
-                      clipBehavior: Clip.none,
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(100),
-                      ),
-                      child: Image.asset(
-                        story.imgPath,
+                    child: Transform.scale(
+                      scale: 0.92,
+                      child: Container(
+                        clipBehavior: Clip.hardEdge,
+                        width: double.infinity,
+                        height: double.infinity,
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(100),
+                        ),
+                        child: Image.asset(
+                          story.imgPath,
+                          fit: BoxFit.cover,
+                        ),
                       ),
                     ),
                   ),

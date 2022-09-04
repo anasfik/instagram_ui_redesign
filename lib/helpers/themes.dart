@@ -14,7 +14,7 @@ class AppThemes {
     ),
     textTheme: GoogleFonts.archivoTextTheme().copyWith(
       headline6: TextStyle(
-        color: AppColors.pink,
+        color: AppColors.white,
         fontWeight: FontWeight.bold,
         fontSize: 11,
       ),

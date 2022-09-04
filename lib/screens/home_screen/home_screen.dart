@@ -4,7 +4,7 @@ import 'package:instagram_redesign/controllers/home_screen_controller.dart';
 import 'package:instagram_redesign/screens/home_screen/widgets/IURBottomBar.dart';
 import 'package:instagram_redesign/screens/home_screen/widgets/IURPostCard.dart';
 
-
+import '../../helpers/random_image_generator.dart';
 import '../../models/IURPost_model.dart';
 import 'widgets/ExploreTitle.dart';
 import 'widgets/IURAppBar.dart';
@@ -53,16 +53,16 @@ class Homepage extends StatelessWidget {
                 key: Key("postCard$index"),
                 post: postsSamples[index],
               ),
-            )
+            ),
+            SizedBox(
+              height: 100,
+            ),
           ],
         ),
       ),
     );
   }
 }
-
-
-
 
 final homeScreenController = Get.put(HomeScreenController());
 
@@ -73,9 +73,9 @@ List<IURPostModel> postsSamples = [
     authorName: 'Maoo.lopez',
     authorImgPath: 'assets/images/add_story_item_profile.png',
     imgPaths: <String>[
-      "assets/postImgs/space.png",
-      "assets/postImgs/space.png",
-      "assets/postImgs/space.png",
+      RandomImageGenerator.randomImage(),
+      RandomImageGenerator.randomImage(),
+      RandomImageGenerator.randomImage(),
     ],
     title: "SACRIFICE | VIRUS",
     description: "this photomanipulation inspired in the virus ",
@@ -95,9 +95,9 @@ List<IURPostModel> postsSamples = [
     authorName: 'Maoo.lopez',
     authorImgPath: 'assets/images/add_story_item_profile.png',
     imgPaths: <String>[
-      "assets/postImgs/space.png",
-      "assets/postImgs/space.png",
-      "assets/postImgs/space.png",
+      RandomImageGenerator.randomImage(),
+      RandomImageGenerator.randomImage(),
+      RandomImageGenerator.randomImage(),
     ],
     title: "SACRIFICE | VIRUS",
     description: "this photomanipulation inspired in the virus ",

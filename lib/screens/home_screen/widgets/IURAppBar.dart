@@ -64,7 +64,7 @@ class IURAppBar extends StatelessWidget {
 
 List<Map<String, String>> appBarItems = [
   {
-    "semanticLabel": "",
+    "semanticLabel": "plus button",
     "svgPath": "assets/icons/plus.svg",
   },
   {
