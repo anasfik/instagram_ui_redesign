@@ -7,7 +7,7 @@ class ColorHelper {
     late int colorInt;
 
     // case of #FFFFFF
-    if (isValidHexColorFormat(color) && colorString.length == 6) {
+    if (_isValidHexColorFormat(color) && colorString.length == 6) {
       colorInt = int.parse(
         colorString,
         radix: 16,
@@ -16,7 +16,7 @@ class ColorHelper {
     }
 
     // case of #FFF
-    if (isValidHexColorFormat(color) && colorString.length == 3) {
+    if (_isValidHexColorFormat(color) && colorString.length == 3) {
       String doubledString = colorString * 2;
       colorInt = int.parse(
         doubledString,
@@ -28,7 +28,7 @@ class ColorHelper {
     throw Exception('Invalid hex color format');
   }
 
-  static bool isValidHexColorFormat(String color) {
+  static bool _isValidHexColorFormat(String color) {
     return color.startsWith("#") &&
         ((color.substring(1, color.length).length == 6) ||
             (color.substring(1, color.length).length == 3) ||

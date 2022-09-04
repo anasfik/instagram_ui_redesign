@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 
-import '../../helpers/dumbData/posts.dart';
-import '../home_screen/widgets/IURAppBar.dart';
 import '../home_screen/widgets/QtatusBarSizedBox.dart';
+import 'widgets/IURAppBar.dart';
+import 'widgets/IURCategoriesScrollView.dart';
 
 class SearchScreen extends StatelessWidget {
   const SearchScreen({super.key});
@@ -18,6 +18,10 @@ class SearchScreen extends StatelessWidget {
             additionalHeight: 10,
           ),
           IURAppBar(),
+          SizedBox(
+            height: 25,
+          ),
+          IURCategoriesScrollView()
         ],
       ),
     );
