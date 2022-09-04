@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:instagram_redesign/screens/search_screen/widgets/IURSearchField.dart';
 
 import '../home_screen/widgets/QtatusBarSizedBox.dart';
 import 'widgets/IURAppBar.dart';
@@ -21,7 +22,11 @@ class SearchScreen extends StatelessWidget {
           SizedBox(
             height: 25,
           ),
-          IURCategoriesScrollView()
+          IURCategoriesScrollView(),
+          SizedBox(
+            height: 25,
+          ),
+          IURSearchField(),
         ],
       ),
     );

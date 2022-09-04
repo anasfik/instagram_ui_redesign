@@ -19,7 +19,7 @@ class IURCategoryItem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: 100,
+      width: 95,
       height: 110,
       margin: const EdgeInsets.only(right: 7.5),
       decoration: BoxDecoration(

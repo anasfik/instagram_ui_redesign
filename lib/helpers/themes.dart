@@ -39,6 +39,10 @@ class AppThemes {
         fontSize: 18,
       ),
       
+    
+    ),
+    inputDecorationTheme: InputDecorationTheme(
+
     ),
   );
 }
