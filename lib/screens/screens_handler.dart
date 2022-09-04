@@ -28,12 +28,18 @@ class Homepage extends StatelessWidget {
         builder: (_) {
           return IndexedStack(
             index: _.getIndexOfClickedNavItem ?? 0,
-            children: const <StatelessWidget>[
+            children: const <Widget>[
               HomeScreen(),
               SearchScreen(),
-              HomeScreen(),
-              SearchScreen(),
-              HomeScreen(),
+              Center(
+                child: Text("Under Constructiing"),
+              ),
+              Center(
+                child: Text("Under Constructiing"),
+              ),
+              Center(
+                child: Text("Under Constructiing"),
+              ),
             ],
           );
         },
