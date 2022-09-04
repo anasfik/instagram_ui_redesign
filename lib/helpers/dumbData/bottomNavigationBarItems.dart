@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import '../colors/colors.dart';
+
 List<Map> bottomNavigationItems = [
   {
     "label": "Home",

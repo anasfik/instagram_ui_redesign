@@ -16,22 +16,25 @@ class SearchScreen extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.center,
         children: <Widget>[
-          StatusBarSizedBox(
+          const StatusBarSizedBox(
             additionalHeight: 10,
           ),
-          IURAppBar(),
-          SizedBox(
+          const IURAppBar(),
+          const SizedBox(
             height: 25,
           ),
-          IURCategoriesScrollView(),
-          SizedBox(
+          const IURCategoriesScrollView(),
+          const SizedBox(
             height: 25,
           ),
-          IURSearchField(),
-          SizedBox(
+          const IURSearchField(),
+          const SizedBox(
             height: 25,
           ),
           StaggeredPosts(),
+          const SizedBox(
+            height: 25,
+          ),
         ],
       ),
     );
