@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:get/state_manager.dart';
+import 'package:instagram_redesign/controllers/screens_handler_controller.dart';
 
 import '../../../helpers/colors/colors.dart';
+import '../../../helpers/dumbData/bottomNavigationBarItems.dart';
 import '../../../helpers/icons.dart';
 
 class IURBottomBar extends StatelessWidget {
@@ -10,51 +13,39 @@ class IURBottomBar extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return BottomNavigationBar(
-      key: const Key('bottomNavigationBar'),
-      type: BottomNavigationBarType.fixed,
-      showSelectedLabels: false,
-      showUnselectedLabels: false,
-      items: <BottomNavigationBarItem>[
-        BottomNavigationBarItem(
-          label: "Home",
-          icon: SvgIconsHelper.fromSvg(
-            svgPath: "assets/icons/home.svg",
-            semanticLabel: "home icon",
-            color: AppColors.pink,
-          ),
-        ),
-        BottomNavigationBarItem(
-          label: "Home",
-          icon: SvgIconsHelper.fromSvg(
-            svgPath: "assets/icons/search.svg",
-            semanticLabel: "search icon",
-          ),
-        ),
-        BottomNavigationBarItem(
-          label: "just for taking extra space",
-          icon: SvgIconsHelper.fromSvg(
-            svgPath: "assets/icons/bar_heart.svg",
-            color: Colors.transparent,
-            semanticLabel: "just for taking extra space",
-          ),
-        ),
-        BottomNavigationBarItem(
-          label: "heart",
-          icon: SvgIconsHelper.fromSvg(
-            svgPath: "assets/icons/bar_heart.svg",
-            semanticLabel: "heart icon",
-          ),
-        ),
-        const BottomNavigationBarItem(
-          label: "profile image",
-          icon: CircleAvatar(
-            radius: 14,
-            backgroundImage:
-                AssetImage("assets/images/add_story_item_profile.png"),
-          ),
-        ),
-      ],
+    return GetBuilder<ScreensHandlerController>(
+      builder: (_) {
+        return BottomNavigationBar(
+          key: const Key('bottomNavigationBar'),
+          type: BottomNavigationBarType.fixed,
+          showSelectedLabels: false,
+          showUnselectedLabels: false,
+          onTap: (index) {
+            _.showScreenWithIndexOf(index);
+          },
+          items: <BottomNavigationBarItem>[
+            ...List.generate(
+              bottomNavigationItems.length,
+              (index) => BottomNavigationBarItem(
+                label: bottomNavigationItems[index]['label'],
+                icon: bottomNavigationItems[index]['profileImg'] != null
+                    ? CircleAvatar(
+                        radius:
+                            bottomNavigationItems[index]['radius'] as double,
+                        backgroundImage: AssetImage(
+                            bottomNavigationItems[index]['profileImg']),
+                      )
+                    : SvgIconsHelper.fromSvg(
+                        svgPath: bottomNavigationItems[index]['svgPath'],
+                        semanticLabel: bottomNavigationItems[index]
+                            ['semanticLabel'],
+                        color: bottomNavigationItems[index]['color'],
+                      ),
+              ),
+            )
+          ],
+        );
+      },
     );
   }
 }

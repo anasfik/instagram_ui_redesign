@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:instagram_redesign/models/IURStories_model.dart';
 
+import '../../../helpers/dumbData/stories.dart';
 import '../../../helpers/random_image_generator.dart';
 import 'IURStorieItem.dart';
 
@@ -34,30 +35,3 @@ class IURStoriesScrollView extends StatelessWidget {
     );
   }
 }
-
-List<IURStoriesModel> iURStories = [
-  IURStoriesModel(
-      imgPath: RandomImageGenerator.randomImage(),
-      title: "",
-      isAddStorieItem: true),
-  IURStoriesModel(
-      imgPath: RandomImageGenerator.randomImage(),
-      title: "Luz.anzo",
-      isAddStorieItem: false),
-  IURStoriesModel(
-      imgPath: RandomImageGenerator.randomImage(),
-      title: "Alice_002",
-      isAddStorieItem: false),
-  IURStoriesModel(
-      imgPath: RandomImageGenerator.randomImage(),
-      title: "Perla_Pipol",
-      isAddStorieItem: false),
-  IURStoriesModel(
-      imgPath: RandomImageGenerator.randomImage(),
-      title: "Cambray_Style",
-      isAddStorieItem: false),
-  IURStoriesModel(
-      imgPath: RandomImageGenerator.randomImage(),
-      title: "Perla_Pipol",
-      isAddStorieItem: false),
-];
