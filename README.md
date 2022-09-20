@@ -17,7 +17,7 @@ Status : [NOT COMPLETED]
 # Usage
 Click the "Fork" button, or clone this repository with
 ```
-git clone dedd
+git clone https://github.com/anasfik/instagram_ui_redesign.git
 ```
 
 After that, run this in the command line
