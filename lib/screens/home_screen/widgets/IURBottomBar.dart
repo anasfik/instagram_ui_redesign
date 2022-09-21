@@ -21,7 +21,7 @@ class IURBottomBar extends StatelessWidget {
           showSelectedLabels: false,
           showUnselectedLabels: false,
           onTap: (index) {
-            _.showScreenWithIndexOf(index);
+            _.showScreenWithIndexOf2(index);
           },
           items: <BottomNavigationBarItem>[
             ...List.generate(

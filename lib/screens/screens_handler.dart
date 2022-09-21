@@ -26,8 +26,9 @@ class Homepage extends StatelessWidget {
       body: GetBuilder<ScreensHandlerController>(
         global: true,
         builder: (_) {
-          return IndexedStack(
-            index: _.getIndexOfClickedNavItem ?? 0,
+          return PageView(
+            controller: screensHandlerController.pageController,
+            physics: const NeverScrollableScrollPhysics(),
             children: const <Widget>[
               HomeScreen(),
               SearchScreen(),
@@ -42,6 +43,22 @@ class Homepage extends StatelessWidget {
               ),
             ],
           );
+          // return IndexedStack(
+          //   index: _.getIndexOfClickedNavItem ?? 0,
+          //   children: const <Widget>[
+          //     HomeScreen(),
+          //     SearchScreen(),
+          //     Center(
+          //       child: Text("Under Constructiing"),
+          //     ),
+          //     Center(
+          //       child: Text("Under Constructiing"),
+          //     ),
+          //     Center(
+          //       child: Text("Under Constructiing"),
+          //     ),
+          //   ],
+          // );
         },
       ),
     );
