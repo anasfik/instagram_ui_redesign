@@ -2,14 +2,14 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:instagram_redesign/screens/home_screen/widgets/IURBottomBar.dart';
 
-import '../controllers/screens_handler_controller.dart';
+import '../controllers/screens_handler_controller/screens_handler_controller.dart';
 import 'home_screen/home.dart';
 import 'home_screen/widgets/IURFAB.dart';
 import 'search_screen/search.dart';
 
 class Homepage extends StatelessWidget {
   Homepage({super.key});
-  final screensHandlerController = Get.put(ScreensHandlerController());
+  final controller = Get.put(ScreensHandlerController());
 
   @override
   Widget build(BuildContext context) {
@@ -24,10 +24,11 @@ class Homepage extends StatelessWidget {
       floatingActionButton: const IURFAB(),
       floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
       body: GetBuilder<ScreensHandlerController>(
+        id: controller.idToUpdateWith,
         global: true,
         builder: (_) {
           return PageView(
-            controller: screensHandlerController.pageController,
+            controller: _.pageController,
             physics: const NeverScrollableScrollPhysics(),
             children: const <Widget>[
               HomeScreen(),
@@ -43,22 +44,7 @@ class Homepage extends StatelessWidget {
               ),
             ],
           );
-          // return IndexedStack(
-          //   index: _.getIndexOfClickedNavItem ?? 0,
-          //   children: const <Widget>[
-          //     HomeScreen(),
-          //     SearchScreen(),
-          //     Center(
-          //       child: Text("Under Constructiing"),
-          //     ),
-          //     Center(
-          //       child: Text("Under Constructiing"),
-          //     ),
-          //     Center(
-          //       child: Text("Under Constructiing"),
-          //     ),
-          //   ],
-          // );
+        
         },
       ),
     );

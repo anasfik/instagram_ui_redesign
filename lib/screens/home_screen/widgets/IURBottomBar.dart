@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/state_manager.dart';
-import 'package:instagram_redesign/controllers/screens_handler_controller.dart';
+import 'package:instagram_redesign/controllers/screens_handler_controller/screens_handler_controller.dart';
 
 import '../../../helpers/colors/colors.dart';
 import '../../../helpers/dumbData/bottomNavigationBarItems.dart';
@@ -21,7 +21,7 @@ class IURBottomBar extends StatelessWidget {
           showSelectedLabels: false,
           showUnselectedLabels: false,
           onTap: (index) {
-            _.showScreenWithIndexOf2(index);
+            _.showScreenWithIndexOf(index);
           },
           items: <BottomNavigationBarItem>[
             ...List.generate(
