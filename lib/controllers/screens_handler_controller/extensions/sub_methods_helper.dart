@@ -4,7 +4,7 @@ import '../../../helpers/colors/colors.dart';
 import '../screens_handler_controller.dart';
 import '../typedef/typedef.dart';
 
-extension InitNavigationItemsColorExtensions on ScreensHandlerController {
+extension InitNavigationItemsColorExtension on ScreensHandlerController {
   void _initNavigationItemsColor(List itemsList) {
     for (var item in itemsList) {
       if (item["color"] != Colors.transparent) {
@@ -31,13 +31,12 @@ extension ColorizeItemWithIndexExtension on ScreensHandlerController {
 extension IsClickedOnAnotherItemExtension on ScreensHandlerController {
   bool _isClickedOnAnotherItem(int index) {
     if (previousIndex == index) {
-      print(false);
       return false;
     }
     previousIndex = index;
-    print(true);
     return true;
   }
 
+  /// return true if we clicked on differant index than the actual, and false if we clicked on the same item more than once, to stop unnecessary rebuilds )
   CheckerWithIndex get isClickedOnAnotherItem => _isClickedOnAnotherItem;
 }
