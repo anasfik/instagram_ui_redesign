@@ -2,10 +2,10 @@ import 'package:flutter/cupertino.dart';
 
 import '../../../helpers/colors/colors.dart';
 
-class IURProfile extends StatelessWidget {
-  const IURProfile({super.key});
+class IURProfileImage extends StatelessWidget {
+  const IURProfileImage({super.key});
   final double plusBottomPosition = 9,
-      backgroundContainerSize = 72,
+      backgroundContainerSize = 100,
       plusIconSize = 22;
 
   @override

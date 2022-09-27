@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
 
 import '../../../models/IURStories_model.dart';
-import 'IURProfile.dart';
+import 'IURGradientButton.dart';
+import 'IURProfileBio.dart';
+import 'IURProfileImage.dart';
+import 'IURProfileName.dart';
 
 class IURProfileSection extends StatelessWidget {
   const IURProfileSection({super.key});
@@ -33,7 +36,25 @@ class IURProfileSection extends StatelessWidget {
                 ),
               ],
             ),
-            IURProfile(),
+            const IURProfileImage(),
+            const SizedBox(
+              height: 10,
+            ),
+            const IURProfileName(),
+            const SizedBox(
+              height: 10,
+            ),
+            IURProfileBioAndTags(
+              hashtagsList: const <String>[
+                "fotografia",
+                "zihuatanejo",
+                "mexico",
+              ],
+            ),
+            const SizedBox(
+              height: 10,
+            ),
+            const IURGradientFollowButton(),
           ],
         ),
       ),
