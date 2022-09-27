@@ -29,6 +29,7 @@ class Homepage extends StatelessWidget {
         global: true,
         builder: (_) {
           return PageView(
+            key: const ValueKey("pageView"),
             controller: _.pageController,
             physics: const NeverScrollableScrollPhysics(),
             children: const <Widget>[

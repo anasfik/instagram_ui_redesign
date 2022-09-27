@@ -1,6 +1,6 @@
 import 'package:get/get.dart';
 
-import '../../controllers/home_screen_controller.dart';
+import '../../controllers/home_screen_controller/home_screen_controller.dart';
 import '../../models/IURPost_model.dart';
 import '../random_image_generator.dart';
 

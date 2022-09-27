@@ -2,7 +2,7 @@ import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-import '../../../controllers/home_screen_controller.dart';
+import '../../../controllers/home_screen_controller/home_screen_controller.dart';
 import '../../../helpers/colors/colors.dart';
 import '../../../models/IURPost_model.dart';
 
