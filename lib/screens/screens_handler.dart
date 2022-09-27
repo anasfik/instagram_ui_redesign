@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:instagram_redesign/screens/home_screen/widgets/IURBottomBar.dart';
+import 'package:instagram_redesign/screens/profile_screen/profile_screen.dart';
 
 import '../controllers/screens_handler_controller/screens_handler_controller.dart';
 import 'home_screen/home.dart';
@@ -39,12 +40,9 @@ class Homepage extends StatelessWidget {
               Center(
                 child: Text("Under Constructiing"),
               ),
-              Center(
-                child: Text("Under Constructiing"),
-              ),
+              ProfileScreen(),
             ],
           );
-        
         },
       ),
     );

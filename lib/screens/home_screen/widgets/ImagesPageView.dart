@@ -26,6 +26,7 @@ class ImagesPageView extends StatelessWidget {
               overscroll: false,
             ),
             child: PageView.builder(
+              
               controller: post.iURPostModelPageController,
               clipBehavior: Clip.hardEdge,
               itemCount: post.imgPaths.length,

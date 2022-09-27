@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:instagram_redesign/helpers/colors/colors.dart';
 
@@ -12,6 +11,7 @@ class AppThemes {
       showSelectedLabels: false,
       backgroundColor: AppColors.white,
     ),
+    cardColor: AppColors.white,
     textTheme: GoogleFonts.archivoTextTheme().copyWith(
       headline6: TextStyle(
         color: AppColors.white,
