@@ -22,14 +22,18 @@ class IURProfileBioAndTags extends StatelessWidget {
         Text(
           bio,
           textAlign: TextAlign.center,
-          style: const TextStyle(color: Colors.white),
+          style: TextStyle(
+            color: Colors.white.withOpacity(.9),
+          ),
         ),
         const SizedBox(
           height: 5,
         ),
         Text(
           hashtagsFullText,
-          style: const TextStyle(color: Colors.white),
+          style: TextStyle(
+            color: Colors.white.withOpacity(.9),
+          ),
           textAlign: TextAlign.center,
         ),
       ],

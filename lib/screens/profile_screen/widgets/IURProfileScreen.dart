@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:instagram_redesign/helpers/colors/colors_helper.dart';
 
 import '../../../models/IURStories_model.dart';
 import 'IURGradientButton.dart';
@@ -13,7 +14,7 @@ class IURProfileSection extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       width: double.infinity,
-      color: Colors.deepPurple ?? Theme.of(context).cardColor,
+      color: ColorHelper.hex("#252735"),
       child: Padding(
         padding: const EdgeInsets.only(top: 50) +
             const EdgeInsets.symmetric(
