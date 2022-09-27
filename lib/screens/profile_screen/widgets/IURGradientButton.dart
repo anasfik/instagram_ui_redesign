@@ -8,7 +8,7 @@ class IURGradientFollowButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: 130,
+      width: 150,
       height: 40,
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(100),
@@ -16,6 +16,7 @@ class IURGradientFollowButton extends StatelessWidget {
           colors: AppColors.instagramGradientColor.colors,
           begin: Alignment.topLeft,
           end: Alignment.bottomRight,
+          
         ),
       ),
       child: Center(

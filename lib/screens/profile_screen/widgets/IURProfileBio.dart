@@ -1,3 +1,4 @@
+import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
 
 class IURProfileBioAndTags extends StatelessWidget {
@@ -19,22 +20,24 @@ class IURProfileBioAndTags extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       children: <Widget>[
-        Text(
+        AutoSizeText(
           bio,
           textAlign: TextAlign.center,
           style: TextStyle(
-            color: Colors.white.withOpacity(.9),
+            color: Colors.white.withOpacity(.8),
           ),
+          maxLines: 1,
         ),
         const SizedBox(
           height: 5,
         ),
-        Text(
+        AutoSizeText(
           hashtagsFullText,
           style: TextStyle(
-            color: Colors.white.withOpacity(.9),
+            color: Colors.white.withOpacity(.8),
           ),
           textAlign: TextAlign.center,
+          maxLines: 1,
         ),
       ],
     );
