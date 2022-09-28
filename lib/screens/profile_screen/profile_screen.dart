@@ -26,7 +26,7 @@ class ProfileScreen extends GetView<ProfileScreenController> {
           IURProfileTabs(),
           SizedBox(
               height: 1300,
-              width: MediaQuery.of(context).size.width - 20,
+              width: MediaQuery.of(context).size.width - 10,
               child: const IURProfileTabView()),
         ],
       ),
