@@ -25,7 +25,7 @@ class IURCategoryItem extends StatelessWidget {
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(15),
         color: !isIGTV ? color : null,
-        gradient: isIGTV ? AppColors.floatingActionButtonColor : null,
+        gradient: isIGTV ? IURColors.floatingActionButtonColor : null,
       ),
       child: Column(
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -34,12 +34,12 @@ class IURCategoryItem extends StatelessWidget {
             svgPath: svgPath,
             semanticLabel: label,
             size: 50,
-            color: AppColors.white,
+            color: IURColors.white,
           ),
           AutoSizeText(
             title,
             style: Theme.of(context).textTheme.headline4!.copyWith(
-                  color: AppColors.white,
+                  color: IURColors.white,
                   fontWeight: FontWeight.w500,
                 ),
             maxLines: 1,

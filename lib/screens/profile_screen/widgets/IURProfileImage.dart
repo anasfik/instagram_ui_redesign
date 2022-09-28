@@ -16,7 +16,7 @@ class IURProfileImage extends StatelessWidget {
       width: backgroundContainerSize,
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(100),
-        gradient: AppColors.instagramGradientColor,
+        gradient: IURColors.instagramGradientColor,
       ),
       child: Center(
         child: Transform.scale(

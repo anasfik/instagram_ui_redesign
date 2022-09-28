@@ -24,13 +24,13 @@ class HeartButtonWithLikes extends StatelessWidget {
             width: 30,
             height: 30,
             decoration: BoxDecoration(
-              color: post.isLiked ? AppColors.pink : AppColors.white,
+              color: post.isLiked ? IURColors.pink : IURColors.white,
               borderRadius: BorderRadius.circular(100),
             ),
             child: SvgIconsHelper.fromSvg(
                 svgPath: "assets/icons/heart.svg",
                 semanticLabel: "heart icon",
-                color: post.isLiked ? AppColors.white : AppColors.pink),
+                color: post.isLiked ? IURColors.white : IURColors.pink),
           ),
           const SizedBox(width: 5),
           Container(
@@ -39,7 +39,7 @@ class HeartButtonWithLikes extends StatelessWidget {
               vertical: 4,
             ),
             decoration: BoxDecoration(
-              color: AppColors.white.withOpacity(.7),
+              color: IURColors.white.withOpacity(.7),
               borderRadius: BorderRadius.circular(30),
             ),
             child: AutoSizeText(

@@ -4,6 +4,7 @@ import 'package:get/state_manager.dart';
 import '../../controllers/profile_screen_controller/profile_screen_controller.dart';
 import 'widgets/IURProfileTabs.dart';
 import 'widgets/IURProfileScreen.dart';
+import 'widgets/IURProfile_tab_view.dart';
 import 'widgets/IURProfilesScrollView.dart';
 
 class ProfileScreen extends GetView<ProfileScreenController> {
@@ -23,6 +24,10 @@ class ProfileScreen extends GetView<ProfileScreenController> {
             height: 10,
           ),
           IURProfileTabs(),
+          SizedBox(
+              height: 1300,
+              width: MediaQuery.of(context).size.width - 20,
+              child: const IURProfileTabView()),
         ],
       ),
     );

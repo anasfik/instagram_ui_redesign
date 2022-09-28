@@ -11,7 +11,7 @@ class SvgIconsHelper {
   }) {
     return SvgPicture.asset(
       svgPath,
-      color: color ?? AppColors.black,
+      color: color ?? IURColors.black,
       semanticsLabel: semanticLabel,
       height: size,
       width: size,

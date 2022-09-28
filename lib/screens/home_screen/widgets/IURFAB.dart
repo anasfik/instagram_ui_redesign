@@ -37,7 +37,7 @@ class _IURFABState extends State<IURFAB> {
             width: 70,
             height: 70,
             decoration: BoxDecoration(
-              gradient: AppColors.floatingActionButtonColor,
+              gradient: IURColors.floatingActionButtonColor,
               borderRadius: BorderRadius.circular(100),
             ),
             child: InkWell(
@@ -48,7 +48,7 @@ class _IURFABState extends State<IURFAB> {
               child: SvgIconsHelper.fromSvg(
                 svgPath: "assets/icons/instagram.svg",
                 semanticLabel: "instagram icon",
-                color: AppColors.white,
+                color: IURColors.white,
               ),
             ),
           ),

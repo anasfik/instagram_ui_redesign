@@ -38,7 +38,7 @@ class IURAppBar extends StatelessWidget {
                         width: 15,
                         height: 15,
                         decoration: BoxDecoration(
-                          color: AppColors.pink,
+                          color: IURColors.pink,
                           borderRadius: BorderRadius.circular(50),
                         ),
                         child: Center(

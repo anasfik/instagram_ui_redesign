@@ -16,7 +16,7 @@ class IURSearchField extends StatelessWidget {
         borderRadius: BorderRadius.circular(15),
       ),
       child: TextField(
-        cursorColor: AppColors.pink,
+        cursorColor: IURColors.pink,
         decoration: InputDecoration(
           contentPadding: const EdgeInsets.only(
             top: 15,
@@ -35,7 +35,7 @@ class IURSearchField extends StatelessWidget {
           suffixIcon: SvgIconsHelper.fromSvg(
             svgPath: "assets/icons/qr.svg",
             semanticLabel: "qr icon",
-            color: AppColors.pink,
+            color: IURColors.pink,
           ),
           border: InputBorder.none,
           filled: true,

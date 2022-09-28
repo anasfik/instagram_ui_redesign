@@ -17,13 +17,13 @@ class CommentButton extends StatelessWidget {
         width: 30,
         height: 30,
         decoration: BoxDecoration(
-          color: AppColors.white,
+          color: IURColors.white,
           borderRadius: BorderRadius.circular(100),
         ),
         child: SvgIconsHelper.fromSvg(
           svgPath: "assets/icons/comment.svg",
           semanticLabel: "comment icon",
-          color: AppColors.black,
+          color: IURColors.black,
         ),
       ),
     );

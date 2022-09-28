@@ -20,7 +20,7 @@ extension InitNavigationItemsColorExtension on ScreensHandlerController {
 extension ColorizeItemWithIndexExtension on ScreensHandlerController {
   void _colorizeItemWithIndex(List itemsList, index) {
     if (itemsList[index]["color"] != Colors.transparent) {
-      itemsList[index]['color'] = AppColors.pink;
+      itemsList[index]['color'] = IURColors.pink;
     }
   }
 

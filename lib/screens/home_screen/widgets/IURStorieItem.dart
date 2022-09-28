@@ -39,7 +39,7 @@ class IURStorieItem extends StatelessWidget {
                     borderRadius: BorderRadius.circular(100),
                     gradient: story.isAddStorieItem
                         ? null
-                        : AppColors.instagramGradientColor,
+                        : IURColors.instagramGradientColor,
                   ),
                   child: Center(
                     child: Transform.scale(
@@ -72,7 +72,7 @@ class IURStorieItem extends StatelessWidget {
                           width: 2.5,
                         ),
                         borderRadius: BorderRadius.circular(100),
-                        gradient: AppColors.instagramGradientColor,
+                        gradient: IURColors.instagramGradientColor,
                       ),
                       child: Center(
                         child: SvgIconsHelper.fromSvg(

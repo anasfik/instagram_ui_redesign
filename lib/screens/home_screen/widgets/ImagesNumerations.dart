@@ -28,13 +28,13 @@ class ImagesNumerations extends StatelessWidget {
             vertical: 4,
           ),
           decoration: BoxDecoration(
-            color: AppColors.black.withOpacity(.25),
+            color: IURColors.black.withOpacity(.25),
             borderRadius: BorderRadius.circular(20),
           ),
           child: AutoSizeText(
             "${(post.iURPostModelPageController == homeScreenController.pageControllerExample1 ? homeScreenController.scrollPosition1.value!.round() : homeScreenController.scrollPosition2.value!.round()) + 1} / ${post.imgPaths.length}",
             style: Theme.of(context).textTheme.headline4!.copyWith(
-                  color: AppColors.white,
+                  color: IURColors.white,
                   fontWeight: FontWeight.w500,
                   fontSize: 12,
                 ),

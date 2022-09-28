@@ -13,17 +13,16 @@ class IURGradientFollowButton extends StatelessWidget {
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(100),
         gradient: LinearGradient(
-          colors: AppColors.instagramGradientColor.colors,
+          colors: IURColors.instagramGradientColor.colors,
           begin: Alignment.topLeft,
           end: Alignment.bottomRight,
-          
         ),
       ),
       child: Center(
         child: Text(
           "Follow",
           style: Theme.of(context).textTheme.headline3!.copyWith(
-                color: AppColors.white,
+                color: IURColors.white,
                 fontWeight: FontWeight.w500,
               ),
         ),

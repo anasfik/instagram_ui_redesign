@@ -17,17 +17,15 @@ class IURPostCard extends StatelessWidget {
     required this.post,
   }) : super(key: key);
 
-
   final HomeScreenController homeScreenController =
       Get.put(HomeScreenController());
   final IURPostModel post;
-
 
   @override
   Widget build(BuildContext context) {
     return Container(
       decoration: BoxDecoration(
-        color: AppColors.white,
+        color: IURColors.white,
         borderRadius: BorderRadius.circular(20),
       ),
       width: double.infinity,
@@ -75,7 +73,7 @@ class IURPostCard extends StatelessWidget {
                   TextSpan(
                     style: Theme.of(context).textTheme.headline4!.copyWith(
                           fontWeight: FontWeight.w400,
-                          color: AppColors.black.withOpacity(.6),
+                          color: IURColors.black.withOpacity(.6),
                         ),
                     children: [
                       const TextSpan(text: "Liked by "),
@@ -83,7 +81,7 @@ class IURPostCard extends StatelessWidget {
                         text: "${post.likes}",
                         style: TextStyle(
                             fontWeight: FontWeight.w700,
-                            color: AppColors.black.withOpacity(1)),
+                            color: IURColors.black.withOpacity(1)),
                       ),
                       const TextSpan(text: " people"),
                     ],
@@ -96,7 +94,7 @@ class IURPostCard extends StatelessWidget {
                   TextSpan(
                     style: Theme.of(context).textTheme.headline4!.copyWith(
                           fontWeight: FontWeight.w400,
-                          color: AppColors.black.withOpacity(1),
+                          color: IURColors.black.withOpacity(1),
                           fontSize: 14,
                         ),
                     children: [
@@ -122,7 +120,7 @@ class IURPostCard extends StatelessWidget {
                   TextSpan(
                     style: Theme.of(context).textTheme.headline4!.copyWith(
                           fontWeight: FontWeight.bold,
-                          color: AppColors.black.withOpacity(.2),
+                          color: IURColors.black.withOpacity(.2),
                         ),
                     children: [
                       const TextSpan(text: "See all "),

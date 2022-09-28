@@ -7,7 +7,7 @@ class ProfileScreenController extends GetxController
     with TabInitialisationsMixin, GetSingleTickerProviderStateMixin {
   late TabController tabController;
   List<String> tabsTexts = ["Posts", "IGTV", "Saved"];
-
+  
   @override
   void onInit() {
     tabController = TabController(length: tabsTexts.length, vsync: this);

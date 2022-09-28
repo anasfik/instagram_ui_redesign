@@ -9,7 +9,7 @@ class IURProfileName extends StatelessWidget {
     return Text(
       "Mauricio Lopez",
       style: Theme.of(context).textTheme.headline1!.copyWith(
-            color: AppColors.white,
+            color: IURColors.white,
           ),
     );
   }
